@@ -23,6 +23,10 @@ if [ $? != 0 ]; then
 	tmux send-keys -t $SESH:ptrheap "cd ~/Documents/SampleProjects/c_Ptr_Mem_Obj/simple/ptr_in_heap/" C-m
 	tmux send-keys -t $SESH:ptrheap "nvim ptr_in_heap.c" C-m
 
+	tmux new-window -t $SESH -n "objects"
+	tmux send-keys -t $SESH:object "cd ~/Documents/SampleProjects/c_Ptr_Mem_Obj/objects/" C-m
+	tmux send-keys -t $SESH:object "nvim Stack.c" C-m
+
 	# tmux new-window -t $SESH -n "server"
 	# tmux send-keys -t $SESH:server "cd ~/Documents/SampleProjects/my_proj/" C-m
 	# tmux send-keys -t $SESH:server "npm run dev" C-m
